@@ -85,7 +85,7 @@ function Projects() {
                                     <span className="dot green"></span>
                                 </div>
                                 <div className='thumbnail-container'>
-                                    <a className="thumbnail-link" href="https://github.com/catl00/react-projects-cl/tree/main/my-portfolio" target="_blank" rel="noreferrer">
+                                    <a className="thumbnail-link" href="https://github.com/catl00/catherineyle" target="_blank" rel="noreferrer">
                                         <img className='project-ss' src={Portfolio} alt="Catherine's Portfolio" />
                                     </a>
                                 </div>
