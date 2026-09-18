@@ -4,6 +4,11 @@ nav {
     flex-direction: column;
     gap: 15px;
     margin-top: 10px;
+    width: 100%;
+    max-width: 1250px; /* Restricts header width to align directly with main content */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .section-1 {
@@ -12,6 +17,7 @@ nav {
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .brand {
@@ -21,6 +27,7 @@ nav {
     gap: 1rem;
     text-decoration: none;
     cursor: pointer;
+    flex-shrink: 0; /* Prevents Safari from compressing the brand logo */
 }
 
 .brand h1 {
@@ -34,6 +41,7 @@ nav {
     width: 60px;
     height: 60px;
     border-radius: 1rem;
+    object-fit: cover; /* Prevents image squishing in Safari */
 }
 
 /* Nav Links & Active State */
@@ -50,8 +58,11 @@ nav {
     color: var(--color-text-light);
     text-decoration: none;
     cursor: pointer;
-    transition: font-weight 0.2s ease, opacity 0.2s ease;
+    transition: font-weight 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
     opacity: 0.8;
+    flex-shrink: 0; /* Ensures links do not collapse on smaller screens in Safari */
+    -webkit-backface-visibility: hidden; /* Fixes hover animation jitter in Safari */
+    backface-visibility: hidden;
 }
 
 .nav-item:hover {
@@ -66,18 +77,22 @@ nav {
 
 /* Highlights & Progress Line */
 .section-2 {
-    width: 1280px;
+    width: 100%;
+    max-width: 1250px;
     position: relative;
     height: 30px;
-    margin-bottom: auto;
+    margin-bottom: 0;
 }
 
 .dot {
     width: 10px;
     height: 10px;
     position: absolute;
+    top: 0;
+    left: 0;
     background-color: #F6FBFE;
-    border-radius: 100%;
+    border-radius: 50%; /* Standard 50% for circular elements across engines */
+    z-index: 3;
 }
 
 .nav-bar {
@@ -88,17 +103,25 @@ nav {
 }
 
 .nav-bar-track {
-    width: 1280px;
+    width: 100%;
     left: 0;
     background: #C4D8E5;
+    z-index: 1;
 }
 
 .nav-bar-active {
+    top: 20px;
+    height: 10px;
     background: #F7FBFE;
-    /* Smooth sliding animation across steps */
+    z-index: 2; /* Forces layer above track in Safari */
+    border-radius: 10px;
+    will-change: left, width;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     transition: left 0.5s ease-out, width 0.5s ease-out;
 }
 
+/* Responsive Styles */
 @media (max-width: 1024px) {
     nav {
         width: 100%;
@@ -139,6 +162,7 @@ nav {
     .nav-links {
         gap: 16px 24px;
         width: 100%;
+        flex-wrap: wrap; /* Allows wrap on mobile screens in WebKit */
     }
 
     .nav-item {

@@ -13,25 +13,36 @@
   cursor: default;
 }
 
+/* Ensure full height calculations work reliably in Safari */
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Inter", -apple-system, Roboto, Helvetica, sans-serif;
   background: var(--color-bg);
   color: var(--color-text-dark);
   min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height fix for iOS Safari */
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrollbars */
+  -webkit-font-smoothing: antialiased; /* Clean text rendering in Safari */
 }
 
 .app-shell {
   min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .app-main {
-  flex: 1;
+  flex: 1 0 auto; /* Ensures flex container stretches reliably in WebKit */
+  width: 100%;
 }
 
 .page {
@@ -45,10 +56,9 @@ body {
   display: flex;
   align-items: stretch;
   gap: 30px;
-  margin: 50px auto 0 auto; /* Added 'auto' to left/right margins to center horizontally */
+  margin: 50px auto 0 auto;
   width: 100%;
-  max-width: 1250px; /* Restrict max-width so it leaves side margins on wide screens */
-  
+  max-width: 1250px;
 }
 
 /* Action Buttons */
@@ -76,15 +86,28 @@ button {
   font-weight: 700;
   line-height: 1.2;
   border: none;
+  padding: 0;
+  cursor: pointer;
+  /* Removes default OS button styles forced by Safari */
+  -webkit-appearance: none;
+  appearance: none;
+  flex-shrink: 0; /* Prevents Safari from shrinking buttons inside flex containers */
+  transition: background-color 0.2s ease;
 }
 
-.button a {
-    text-decoration: none;
-    color: var(--color-text-dark);
+/* Fixes button links so the entire pill area is clickable across browsers */
+button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--color-text-dark);
 }
 
 button:hover {
-    background-color: #8EB1D1;
+  background-color: #8EB1D1;
 }
 
 @media (max-width: 1024px) {
