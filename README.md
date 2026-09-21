@@ -1,6 +1,11 @@
 # 💻 Personal Developer Portfolio
 
 A modern React web application built with Vite — designed to showcase my web engineering projects, interactive UI components, and professional journey bridging Front-End Engineering and UX/UI Design.
+| **Resource** | **Link** |
+| :--- | :--- |
+| **🚀 Live Application** | [catl00.github.io/catherineyle](https://catl00.github.io/catherineyle/#/) |
+| **💻 GitHub Repository** | [github.com/catl00/catherineyle](https://github.com/catl00/catherineyle) |
+| **🎨 Figma Design Specs** | [View UI/UX Prototype on Figma](https://www.figma.com/design/3Ry4BZuE1LbxvQ5Q4qgsvK/Developer-Portfolio?node-id=0-1&t=DZjcPj9P4YsjbFfX-1) |
 
 ---
 
