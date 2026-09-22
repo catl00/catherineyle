@@ -44,7 +44,7 @@ function Experience() {
             <div className='sidebar'>
                 <div className='skills'>
                     <h1>Skills</h1>
-                    <div class="skill-groups">
+                    <div className="skill-groups">
                         <h2>Primary Development Stack</h2>
                         <ul>
                             <li><strong>Front-End Core</strong>: JavaScript, HTML/CSS, React.js</li>
@@ -52,14 +52,14 @@ function Experience() {
                             <li><strong>Content &amp; Low-Code Platforms</strong>: WordPress, Power Pages, Power Apps</li>
                         </ul>
                     </div>
-                    <div class="skill-groups">
+                    <div className="skill-groups">
                         <h2>Methodologies</h2>
                         <ul>
                             <li><strong>Design &amp; User Experience</strong>: Responsive &amp; Accessible Design, Figma, Data Visualization (Power BI)</li>
                             <li><strong>Development Lifecycle</strong>: Agile / Scrum, SDLC, Requirements &amp; User Stories</li>
                         </ul>
                     </div>
-                    <div class="skill-groups">
+                    <div className="skill-groups">
                         <h2>Tools &amp; Collaboration</h2>
                         <ul>
                             <li><strong>Version Control &amp; DevOps</strong>: Git / GitHub, Azure DevOps (Boards &amp; Test Plans)</li>

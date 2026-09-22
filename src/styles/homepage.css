@@ -48,6 +48,54 @@
     gap: 25px;
 }
 
+@media (max-width: 1024px) {
+    .about p {
+        padding: 0 24px;
+    }
+
+    .images {
+        gap: 16px;
+        padding: 32px 24px 0;
+    }
+
+    .images img {
+        width: min(28%, 180px);
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .about p {
+        padding: 0;
+    }
+
+    .images {
+        gap: 10px;
+        padding: 24px 0 0;
+    }
+
+    .images img {
+        width: min(30%, 120px);
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 479px) {
+    .images {
+        gap: 8px;
+        padding-top: 20px;
+    }
+
+    .images img {
+        width: min(29%, 90px);
+    }
+}
+
 /* Key Point Card */
 .key-points h2 {
     font-size: 20px;

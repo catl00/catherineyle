@@ -114,7 +114,17 @@
     width: 500px !important;
 }
 
-  @media (max-width: 640px) {
+@media (max-width: 1024px) {
+  .socials {
+    padding: 3% 12%;
+  }
+
+  .contact .button {
+    width: min(100%, 420px) !important;
+  }
+}
+
+  @media (max-width: 767px) {
     .socials {
       padding: 20px 0;
     }
@@ -123,11 +133,13 @@
       min-height: 68px;
       height: auto;
       gap: 10px;
+      padding: 10px 12px;
     }
 
     .handle {
       min-width: 0;
       font-size: 14px;
+      overflow-wrap: anywhere;
     }
 
     .copy-btn {
@@ -137,5 +149,26 @@
 
     .contact .button {
       width: min(100%, 320px) !important;
+    }
+
+    .arrow-badge {
+      flex: 0 0 28px;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .platform {
+      min-height: 60px;
+      padding: 8px 10px;
+    }
+
+    .handle {
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
     }
   }

@@ -122,10 +122,15 @@ nav {
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     nav {
         width: 100%;
         padding: 0 24px;
+    }
+
+    .nav-links {
+        gap: 48px;
+        font-size: 24px;
     }
 
     .section-2 {
@@ -133,14 +138,36 @@ nav {
         overflow: hidden;
     }
 
-    .nav-bar-track {
-        width: 100%;
+    .nav-bar-active, .nav-bar-track {
+        display: none;
     }
 }
 
-@media (max-width: 640px) {
+
+@media (max-width: 1024px) {
     nav {
-        padding: 0 16px;
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    .nav-links {
+        gap: 48px;
+        font-size: 24px;
+    }
+
+    .section-2 {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .nav-bar-active, .nav-bar-track {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    nav {
+        padding: 0;
         gap: 10px;
     }
 
@@ -163,6 +190,7 @@ nav {
         gap: 16px 24px;
         width: 100%;
         flex-wrap: wrap; /* Allows wrap on mobile screens in WebKit */
+        justify-content: flex-start;
     }
 
     .nav-item {
@@ -178,7 +206,38 @@ nav {
         height: 8px;
     }
 
-    .nav-bar-track {
-        width: 100%;
+    .nav-bar-track, .nav-bar-active {
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+    nav {
+        gap: 8px;
+    }
+
+    .brand {
+        gap: 0.75rem;
+    }
+
+    .brand h1 {
+        font-size: 21px;
+    }
+
+    .brand img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+    }
+
+    .nav-item {
+        font-size: 18px;
+    }
+
+    .nav-bar-active, .nav-bar-track {
+        display: none;
     }
 }
