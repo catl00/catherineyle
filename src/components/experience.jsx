@@ -71,7 +71,12 @@ function Experience() {
                 
                 <div className='actions'>
                     <button className='button'>
-                        <a href="/resume.pdf" download="Catherine_Le_Resume.pdf">Download Resume</a>
+                        <a 
+                            href="/resume.pdf" 
+                            download="Catherine Le_Resume.docx"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >Download Resume</a>
                     </button>
                     <button onClick={() => navigate('/contact')}>Contact Me</button>
                 </div>
