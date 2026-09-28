@@ -108,7 +108,7 @@ function Projects() {
                                 their mission to fund research and investments to accelerate 
                                 discovery, science and innovation in women’s health.
                             </p>
-                            <div className='links'><a href='https://talcott.com/'>Website</a></div>
+                            <div className='links'><a href='https://www.nuttallwomenshealth.org/'>Website</a></div>
                             
                         </div>
                         <div className='project-details'>
@@ -117,7 +117,7 @@ function Projects() {
                                 Supported development for Talcott to enhance the experience for users
                                 who need offerings to retirement solutions.
                             </p>
-                            <div className='links'><a href='https://www.nuttallwomenshealth.org/'>Website</a></div>
+                            <div className='links'><a href='https://talcott.com/'>Website</a></div>
                         </div>
                     </div>
                 </div>
