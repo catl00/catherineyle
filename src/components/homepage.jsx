@@ -67,8 +67,8 @@ function HomePage() {
                 <div className='actions'>
                     <button className='button'>
                         <a 
-                            href="/resume.pdf" 
-                            download="Catherine Le_Resume.docx"
+                            href={`${import.meta.env.BASE_URL}Catherine%20Le_Resume.docx`}
+                            download="Catherine%Le_Resume.docx"
                             target="_blank" 
                             rel="noopener noreferrer"
                         >Download Resume</a>
